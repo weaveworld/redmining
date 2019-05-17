@@ -1,0 +1,19 @@
+div.Issue[data-status]{ background-color:#f00; }
+
+/*New*/
+div.Issue[data-status='1']{ background-color:#fff; }
+/*Assigned*/
+div.Issue[data-status='2']{ background-color:#eef; }
+/*Solved*/
+div.Issue[data-status='3']{ background-color:#eff; }
+div.Issue[data-status='4']{ background-color:#ffc; }
+div.Issue[data-status='5']{ background-color:#efe; }
+div.Issue[data-status='6']{ background-color:#efe; }
+div.Issue[data-status='7']{ background-color:#fef; } 
+div.Issue[data-status='8']{ background-color:#8f8; } 
+div.Issue[data-status='21']{ background-color:#888; } 
+
+.tracker[data-tracker='1']{ background-color:#f44; } 
+.tracker[data-tracker='2']{ background-color:#ffc; } 
+.tracker[data-tracker='7']{ background-color:#ffc; } 
+.tracker[data-tracker='9']{ background-color:#ccf; } 

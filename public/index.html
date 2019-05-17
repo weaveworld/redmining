@@ -1,0 +1,75 @@
+<html>
+
+<head>
+    <script src="w.min.js"></script>
+    <link href="w.css" rel="stylesheet" />
+    <script src="index.js"></script>
+    <link href="index.css" rel="stylesheet" />
+    <script> //W$DATA=undefined;
+    </script>
+</head>
+
+<body class=w w:item>
+    <div style="color:red; font-size: 150%; white-space: pre;" w:text="$warning"></div>
+    <div>
+        <div class=Issues w:each=issues>
+            <!--!w:css! 
+            div.Issues{ display: flex; flex-flow:row wrap;
+              width:fit-content; min-width:100px; max-width:100%; flex:1 1 auto; 
+              box-sizing: border-box;
+              padding: 0 1ex;
+            } 
+            div.Issue{ width:fit-content; min-width:100px; max-width:100%; _flex:1 1 auto; 
+              min-height:3ex;
+              box-sizing: border-box;
+              margin: 0.5ex 1ex 1ex 0;
+              border-radius: 10px; border-style:solid; border-width:1px; border-color: grey;
+            }      
+            a{
+                color:black; text-decoration: none;
+            }       
+            a.assigned{
+                position:relative; top:-2ex; float:right; padding: 0 0.7ex; 
+                color: #fff; background-color: #888; opacity: 0.9; text-decoration: none;
+                font-size: 115%; text-align: center; 
+                border-radius: 5px; border-style: solid; border: 1px; border-color: #bbb; 
+                user-select: none;
+            }
+            span.head{ font-size:90%; 
+                position:relative; top:-2ex; float:left; padding: 0 0.7ex; 
+                color: #fff; background-color: #888; opacity: 0.9;
+                text-align: center; text-decoration: none;
+                border-radius: 5px; border-style: solid; border: 1px; border-color: #bbb; 
+                user-select: none;
+            } 
+            span.head>a{ color: #444; background-color: #fff; opacity: 0.9; text-decoration: none;
+            }
+            div.title{ position:relative; top:-1ex; clear:left;
+                padding: 0 0 0 0.5ex;
+            }           
+            .tracker{ padding: 0.2ex 0.5ex;
+                border-radius: 10px; border-style:solid; border-width:0px; border-color: grey;
+            }
+            -->
+            <div class="Issue" w:define=issue w:item w:data:isparent=[??]children w:data:status=status.id w:data:tracker=tracker.id
+            w:attr:title="tracker:  {{tracker.name}} #{{tracker.id}}&#13;status:   {{status.id}}&#13;priority: {{priority.id}}&#13;due_date: {{due_date}}&#13;updated: {{[toDate]updated_on}}">
+                <div style="position:relative; margin-top: 1ex; _float: left;">
+                    <a class=assigned w:text="assigned_to.name">X Y</a>
+                    <span class=head>
+                        <span class=wbutton w:text="$hasChildren?'▼':' '" w:on:onclick=issueOpen></span>
+                        <a w:attr:href="$url" target=redmine
+                            w:text="[#{{id}}] ">#2323</a>&nbsp;
+                        <span class=status w:text="status.name">Closed</span>
+                    </span>
+                    <div class=title><a w:attr:href="?id={{id}}&open=1"><span class=tracker w:data:tracker=tracker.id w:text="{{tracker.name}}:"></span> <span w:text="{{subject}}"></span></a></div>
+                </div>
+                <div class=Issues w:each="children">
+                    <div style="_width:33%;" w:use=issue w:item>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

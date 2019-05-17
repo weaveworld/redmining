@@ -1,0 +1,29 @@
+{
+  "name": "redmining",
+  "version": "1.0.0",
+  "description": "Redmine Issue Visualization using Node.js &amp; Weaveworld",
+  "main": "app.js",
+  "scripts": {
+    "start": "redmining"
+  },
+  "keywords": [
+    "Redmine",
+    "Weaveworld"
+  ],
+  "author": "cs.veg@weaveworld.org",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.4",
+    "body-parser": "^1.18.3",
+    "request": "^2.88.0",
+    "weaveworld": "^0.14.190517"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/weaveworld/redmining.git"
+  },
+  "bugs": {
+    "url": "https://github.com/weaveworld/redmining/issues"
+  },
+  "homepage": "https://github.com/weaveworld/redmining#readme"
+}
