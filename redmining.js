@@ -36,7 +36,7 @@ function getIssues(resolve, reject, result, o, queue) {
   }
   if (!queue) { queue = []; result.issues.forEach(issue => queue.push(issue)); }
   var issue = queue.shift();
-  request(o.URL + "/issues/" + issue.id + ".json?key=" + o.KEY + "&include=children", function (err, res, body) {
+  request(o.URL + "/issues/" + issue.id + ".json?key=" + o.KEY + "&include=children&limit=100", function (err, res, body) {
       if (err || !body) { reject(err); return; }
       var r = JSON.parse(body).issue; 
       Object.assign(issue, r); issue.$url=o.URL+"/issues/"+issue.id;

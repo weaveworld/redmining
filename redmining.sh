@@ -1,5 +1,4 @@
-echo on
-cd %0/..
+cd $0/..
 export REDMINING_URL="https://redmine.example.com"
 export REDMINING_KEY="Your api key"
 export REDMINING_ID="Comma separated root ids"

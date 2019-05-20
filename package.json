@@ -4,7 +4,7 @@
   "description": "Redmine Issue Visualization using Node.js &amp; Weaveworld",
   "main": "app.js",
   "scripts": {
-    "start": "redmining"
+    "start": "node ."
   },
   "keywords": [
     "Redmine",
