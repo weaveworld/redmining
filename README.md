@@ -3,6 +3,10 @@
 ## Redmine Issue Visualization using Node.js &amp; Weaveworld
 
 **Setup**:
+   * Redmine setup:
+     * (`Authentication`/) `Enable REST service`
+   * Redmine user setup:
+     * Get API Key: in the top right of the screen: `My account`, `API access key` section, click `Show`.
    * [Node.js](https://nodejs.org/en/download/)
    * `git clone https://github.com/weaveworld/redmining`
    * `cd redmining`
