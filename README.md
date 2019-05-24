@@ -15,6 +15,8 @@
    * Start application via shell script. 
    * Edit `public/index.css` according to your Redmine's settings.
 
+![Screenshot](screenshot.jpg)
+
 **Legend**:
   * Mark '`▼`'/'&nbsp;' on the top left corner shows if there are children. 
     * Clicking on `▼`/'&nbsp;' button **closes** / **opens** children. Opening children or clicking the unmarked ' ' button **refreshes** the Issue.
