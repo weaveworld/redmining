@@ -19,7 +19,8 @@ function issueCheck(issue, leave) {
           issue.children.sort((a, b) => {
               let n;
               if (a.priority && b.priority && !!(n = b.priority.id - a.priority.id)) return n;
-              let da = a.due_date || '9999-99-99', db = b.due_date || '9999-99-99';
+              let da = !a.closed_on && a.due_date || '9999-99-99';
+              let db = !b.closed_on && b.due_date || '9999-99-99';
               if (da < db) return -1; else if (da > db) return 1;
               da = a.updated_on || '0000-00-00'; db = b.updated_on || '0000-00-00';
               if (da > db) return -1; else if (da < db) return 1;
