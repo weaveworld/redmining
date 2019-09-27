@@ -9,8 +9,9 @@
     </script>
 </head>
 
-<body class=w w:item>
-    <div style="color:red; font-size: 150%; white-space: pre;" w:text="$warning"></div>
+<body class="w Page" w:item>
+    <input type=button class=wbutton style="float: right; margin-bottom:1ex;" value="≡" w:on:onclick=clear>    
+    <div style="color:red; font-size: 150%; white-space: pre; clear:both;" w:text="$warning"></div>
     <div>
         <div class=Issues w:each=issues>
             <!--!w:css! 
