@@ -10,9 +10,8 @@ W$TYPE={ $name:'Issue',
   issueOpen$arg:"id,open:1",
   issueOpen: function(el,ev,arg){
     if(this.children){
-      var w=el.offsetWidth;
+      el.style.width=el.offsetWidth;
       w$weave(el,'',{children:null});
-      el.style.width=w;
     }else{
       W$CALL("!getIssue",arg,function(data){
         el.style.width=null;
